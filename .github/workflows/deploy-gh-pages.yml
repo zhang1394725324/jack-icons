@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 监听 main 分支的推送事件
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 授予写入权限，以便 gh-pages action 可以创建和推送构建结果
+      pages: write # 部署到 GitHub Pages 需要此权限
+      id-token: write # 用于部署的身份验证
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: '.' # 指定要部署的文件夹。'.' 表示整个仓库根目录
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
