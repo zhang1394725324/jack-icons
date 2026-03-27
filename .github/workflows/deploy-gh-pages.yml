@@ -21,9 +21,9 @@ jobs:
       uses: actions/configure-pages@v3
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: '.' # 指定要部署的文件夹。'.' 表示整个仓库根目录
+          uses: actions/upload-pages-artifact@v4 # 将 v2 修改为 v4
+          with:
+            path: '.' # 指定要部署的文件夹。'.' 表示整个仓库根目录
 
     - name: Deploy to GitHub Pages
       id: deployment
