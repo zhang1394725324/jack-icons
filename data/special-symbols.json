@@ -1,0 +1,91 @@
+{
+    "中文符号": [
+        {"char": "。", "name": "句号"},
+        {"char": "，", "name": "逗号"},
+        {"char": "！", "name": "感叹号"},
+        {"char": "？", "name": "问号"},
+        {"char": "、", "name": "顿号"},
+        {"char": "：", "name": "冒号"},
+        {"char": "；", "name": "分号"},
+        {"char": "“", "name": "左双引号"},
+        {"char": "”", "name": "右双引号"},
+        {"char": "——", "name": "破折号"},
+        {"char": "……", "name": "省略号"},
+        {"char": "（", "name": "左括号"},
+        {"char": "）", "name": "右括号"},
+        {"char": "《", "name": "左书名号"},
+        {"char": "》", "name": "右书名号"}
+    ],
+    "英文符号": [
+        {"char": ".", "name": "Period"},
+        {"char": ",", "name": "Comma"},
+        {"char": "!", "name": "Exclamation Mark"},
+        {"char": "?", "name": "Question Mark"},
+        {"char": ":", "name": "Colon"},
+        {"char": ";", "name": "Semicolon"},
+        {"char": "\"", "name": "Quotation Mark"},
+        {"char": "'", "name": "Apostrophe"},
+        {"char": "-", "name": "Hyphen"},
+        {"char": "(", "name": "Parenthesis (Left)"},
+        {"char": ")", "name": "Parenthesis (Right)"}
+    ],
+    "数学符号": [
+        {"char": "+", "name": "加号"},
+        {"char": "-", "name": "减号"},
+        {"char": "×", "name": "乘号"},
+        {"char": "÷", "name": "除号"},
+        {"char": "=", "name": "等于号"},
+        {"char": "≠", "name": "不等于号"},
+        {"char": "≈", "name": "约等于号"},
+        {"char": ">", "name": "大于号"},
+        {"char": "<", "name": "小于号"},
+        {"char": "≥", "name": "大于等于号"},
+        {"char": "≤", "name": "小于等于号"},
+        {"char": "√", "name": "根号"},
+        {"char": "∑", "name": "求和符号"},
+        {"char": "∫", "name": "积分符号"},
+        {"char": "∞", "name": "无穷大"}
+    ],
+    "计量单位": [
+        {"char": "℃", "name": "摄氏度"},
+        {"char": "℉", "name": "华氏度"},
+        {"char": "㎡", "name": "平方米"},
+        {"char": "㎏", "name": "千克"},
+        {"char": "㏕", "name": "毫米"},
+        {"char": "㎝", "name": "厘米"},
+        {"char": "㎞", "name": "千米"},
+        {"char": "㏟", "name": "升"},
+        {"char": "%", "name": "百分号"},
+        {"char": "‰", "name": "千分号"}
+    ],
+    "货币符号": [
+        {"char": "¥", "name": "人民币符号"},
+        {"char": "$", "name": "美元符号"},
+        {"char": "€", "name": "欧元符号"},
+        {"char": "£", "name": "英镑符号"},
+        {"char": "₹", "name": "印度卢比符号"},
+        {"char": "₽", "name": "俄罗斯卢布符号"}
+    ],
+    "箭头符号": [
+        {"char": "←", "name": "左箭头"},
+        {"char": "↑", "name": "上箭头"},
+        {"char": "→", "name": "右箭头"},
+        {"char": "↓", "name": "下箭头"},
+        {"char": "↔", "name": "左右箭头"},
+        {"char": "↕", "name": "上下箭头"}
+    ],
+    "其他符号": [
+        {"char": "★", "name": "星号"},
+        {"char": "☆", "name": "空心星"},
+        {"char": "♪", "name": "音符"},
+        {"char": "☎", "name": "电话"},
+        {"char": "✉", "name": "信封"},
+        {"char": "✓", "name": "对勾"},
+        {"char": "✗", "name": "叉号"},
+        {"char": "©", "name": "版权"},
+        {"char": "®", "name": "注册商标"},
+        {"char": "™", "name": "商标"},
+        {"char": "•", "name": "项目符号"},
+        {"char": "§", "name": "分节号"}
+    ]
+}
