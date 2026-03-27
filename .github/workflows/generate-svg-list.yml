@@ -1,0 +1,48 @@
+name: Generate SVG List
+
+on:
+  push:
+    branches:
+      - main # 监听 main 分支的推送事件
+    paths:
+      - 'svg/**' # 仅当 svg/ 目录下的文件有变化时触发
+
+jobs:
+  generate_list:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16' # 使用你需要的 Node.js 版本
+
+    - name: Install jq (for JSON processing)
+      run: sudo apt-get update && sudo apt-get install -y jq
+
+    - name: Generate svg-list.json
+      run: |
+        # 遍历 svg/ 目录下的所有 .svg 文件，提取文件名，并将其格式化为 JSON 数组
+        # 注意：这里假设 svg-list.json 位于项目根目录
+        ls svg/*.svg | sed 's/svg\///' | jq -R . | jq -s . > svg-list.json
+        echo "Generated svg-list.json:"
+        cat svg-list.json
+
+    - name: Check for changes
+      id: git_status
+      run: |
+        git diff --exit-code svg-list.json || echo "changes_detected=true" >> "$GITHUB_OUTPUT"
+
+    - name: Commit and Push changes
+      if: steps.git_status.outputs.changes_detected == 'true'
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add svg-list.json
+        git commit -m "chore: Auto-generate svg-list.json"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
